@@ -2,7 +2,7 @@ import pandas as pd
 from itertools import groupby
 import re
 
-"""Read the file,groupby "SQL_ID", sortby "PIECE",create lists of queries"""
+"""Read the files,groupby "SQL_ID", sortby "PIECE",create lists of queries"""
 
 fileRead = pd.read_csv('D:/sparkProjects/data/TableList.txt', sep="|")
 querySort = fileRead.sort_values(['PIECE'], ascending=True).groupby('SQL_ID', as_index=False).agg(lambda x: x.tolist()) #.sort_values(['PIECE'],ascending = True)
