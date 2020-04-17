@@ -24,7 +24,7 @@ for k in myList:
     # print (words)
 #
     if ("JOIN" or "WHERE") in words:
-       for i in range(0, len(words)):
+       for i in range(1, len(words)):
            if words[i].startswith('FROM'):
                subList = []
                while (True):
